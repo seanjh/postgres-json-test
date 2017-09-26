@@ -1,0 +1,14 @@
+version: "2"
+services:
+    postgres:
+      image: postgres:9-alpine
+      volumes:
+        - data:/var/lib/postgresql/data
+      ports:
+        - "5432:5432"
+      environment:
+        POSTGRES_PASSWORD: password
+        POSTGRES_USER: admin
+        POSTGRES_DB: test
+volumes:
+    data:
